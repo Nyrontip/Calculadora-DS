@@ -15,7 +15,7 @@ body{
     align-items: center;
     flex-direction: column;
     width: 450px;
-    height: 600px;
+    height: 550px;
     border-radius: 20px;
     background-color: rgb(22, 32, 45);
 }
@@ -77,11 +77,6 @@ body{
     border-radius: 5px;
     margin: 0;
     cursor: pointer;
-}
-
-#elemento-0 {
-    grid-column: 2;
-    grid-row: 4;
 }
 
 #boton-eliminar{
