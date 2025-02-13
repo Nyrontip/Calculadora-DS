@@ -26,3 +26,15 @@ keySuma.addEventListener('click', () => {
     }
     keyIgual.addEventListener('click', sumar)
 })
+
+keyResta.addEventListener('click', () => {
+    let numero1 = parseInt(screen.value);
+    screen.value = '';
+
+    function restar() {
+        let numero2 = parseInt(screen.value);
+        screen.value = numero1 - numero2;
+        keyIgual.removeEventListener('click',restar)
+    }
+    keyIgual.addEventListener('click', restar)
+})
