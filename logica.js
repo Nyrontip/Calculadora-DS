@@ -38,3 +38,15 @@ keyResta.addEventListener('click', () => {
     }
     keyIgual.addEventListener('click', restar)
 })
+
+keyMult.addEventListener('click', () => {
+    let numero1 = parseInt(screen.value);
+    screen.value = '';
+
+    function multiplicar() {
+        let numero2 = parseInt(screen.value);
+        screen.value = numero1 * numero2;
+        keyIgual.removeEventListener('click',multiplicar)
+    }
+    keyIgual.addEventListener('click', multiplicar)
+})
