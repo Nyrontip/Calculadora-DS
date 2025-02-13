@@ -16,11 +16,11 @@ keyEliminar.addEventListener('click', () => {
 })
 
 keySuma.addEventListener('click', () => {
-    let numero1 = parseInt(screen.value);
+    let numero1 = parseFloat(screen.value);
     screen.value = '';
 
     function sumar() {
-        let numero2 = parseInt(screen.value);
+        let numero2 = parseFloat(screen.value);
         screen.value = numero1 + numero2;
         keyIgual.removeEventListener('click',sumar)
     }
@@ -28,11 +28,11 @@ keySuma.addEventListener('click', () => {
 })
 
 keyResta.addEventListener('click', () => {
-    let numero1 = parseInt(screen.value);
+    let numero1 = parseFloat(screen.value);
     screen.value = '';
 
     function restar() {
-        let numero2 = parseInt(screen.value);
+        let numero2 = parseFloat(screen.value);
         screen.value = numero1 - numero2;
         keyIgual.removeEventListener('click',restar)
     }
@@ -40,13 +40,25 @@ keyResta.addEventListener('click', () => {
 })
 
 keyMult.addEventListener('click', () => {
-    let numero1 = parseInt(screen.value);
+    let numero1 = parseFloat(screen.value);
     screen.value = '';
 
     function multiplicar() {
-        let numero2 = parseInt(screen.value);
+        let numero2 = parseFloat(screen.value);
         screen.value = numero1 * numero2;
         keyIgual.removeEventListener('click',multiplicar)
     }
     keyIgual.addEventListener('click', multiplicar)
+})
+
+keyDiv.addEventListener('click', () => {
+    let numero1 = parseFloat(screen.value);
+    screen.value = '';
+
+    function dividir() {
+        let numero2 = parseFloat(screen.value);
+        screen.value = numero1 / numero2;
+        keyIgual.removeEventListener('click',dividir)
+    }
+    keyIgual.addEventListener('click', dividir)
 })
